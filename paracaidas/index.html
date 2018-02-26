@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./css/materialize.min.css">
+    <link rel="stylesheet" href="./fonts/roboto">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="slide-out" class="side-nav sidenav">
+        <li>
+            <div class="user-view">
+                <div class="background">
+                    <img src="./img/background.jpeg">
+                </div>
+                <a href="#!user">
+                    <img class="circle" src="./img/me.jpg">
+                </a>
+                <a href="#!name">
+                    <span class="white-text name">Luis Hernandez</span>
+                </a>
+                <a href="#!email">
+                    <span class="white-text email">lu97is@gmail.com</span>
+                </a>
+            </div>
+        </li>
+        <li>
+            <a href="#!">
+                <i class="material-icons">cloud</i>Paracaidas</a>
+        </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+    </ul>
+    <nav>
+        <div class="nav-wrapper black">
+            <a href="#" data-activates="slide-out" class="brand-logo">
+                <i class="material-icons">menu</i>Simulacion</a>
+            <ul class="right hide-on-med-and-down">
+                <li>
+                    <a href="sass.html">
+                        <i class="material-icons">plus</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="badges.html">
+                        <i class="material-icons">view_module</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="collapsible.html">
+                        <i class="material-icons">refresh</i>
+                    </a>
+                </li>
+                <li>
+                    <a href="mobile.html">
+                        <i class="material-icons">more_vert</i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="row" id="menuOption">
+        <div class="col s3">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="./img/card1.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Salto paracaidas
+                        <i class="material-icons right">more_vert</i>
+                    </span>
+                    <p>
+                        <a href="#">Actividad 1</a>
+                    </p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Ejercicio 1
+                        <i class="material-icons right">close</i>
+                    </span>
+                    <p>Ejemplo de una simulacion de el salto con paracaidas de un globo aerostático </p>
+                    <button class="btn" id="first">Ir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="ejercice1">
+        <div class="input-field col s4">
+            <input id="pesoP" type="text" class="validate">
+            <label class="active" for="pesoP">Ingrese el peso del paracaidista</label>
+            <button id="pCal" class="btn">Calcular</button>
+            <div id="grafica">
+
+            </div>
+        </div>
+        <div class="col s8">
+            <table id="pTable" class="scrollable">
+                <thead>
+                    <tr>
+                        <th>Tiempo</th>
+                        <th>Velocidad</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="fixed-action-btn horizontal">
+                <a class="btn-floating btn-large red">
+                  <i class="large material-icons">mode_edit</i>
+                </a>
+                <ul>
+                  <li><a class="btn-floating red"><i class="material-icons">save</i></a></li>
+                  <li id="pReload"><a class="btn-floating yellow darken-1"><i class="material-icons">rotate_left</i></a></li>
+                  <li><a class="btn-floating green"><i class="material-icons">local_printshop</i></a></li>
+                </ul>
+              </div>
+    </div>
+
+    <script src="./js/jquery.js"></script>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+    <script src="./js/materialize.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
