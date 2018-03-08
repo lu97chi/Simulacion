@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row" *ngIf="option == 0">
+      <div class="col-5">
+        <button type="button" class="btn btn-primary btn-block waves-light" #keyboardNewman  id="kN" (click)="options(keyboardNewman.id)" mdbRippleRadius>Por teclado</button>
+      </div>
+      <div class="col-5 offset-1">
+        <button type="button" class="btn btn-success btn-block waves-light" #randomNewman id="rN" (click)="options(randomNewman.id)" mdbRippleRadius>Al azar</button>
+      </div>
+    </div>
+    <div class="row animated fadeIn" *ngIf="option == 1">
+      <form [formGroup]="form" class="col-4">
+        <div >
+          <input formControlName="number" [(ngModel)]="email" (ngModelChange)="onChange($event)" pattern="[0-9]{10}" mdbActive data-error="Minimamente igresa 4 numeros" data-success="Muy bien" minLength="4" type="text" class="form-control" id="form9" name="number" mdbInputValidate>
+        </div>
+      </form>
+      <div class="col-4">
+        <button type="button" class="btn btn-info waves-light" [disabled]="!ready" (click)="start()" mdbRippleRadius>Realizar</button>
+      </div>
+      <div class="col-4">
+        <br>
+        Primer Valor = {{seed}}
+        
+      </div>
+      <div class="col-12">
+        <table class="table">
+  
+          <!--Table head-->
+          <thead class="blue-grey lighten-4">
+              <tr >
+                  <th>#</th>
+                  <th>Numero base</th>
+                  <th>Numero generado</th>
+                  <th>Numero seleccionado</th>
+              </tr>
+          </thead>
+          <!--Table head-->
+        
+          <!--Table body-->
+          <tbody>
+              <tr *ngFor="let n of numerosBase; let i = index">
+                  <th scope="row">{{i}}</th>
+                  <td>{{numerosBaseUnsort[i]}}</td>
+                  <td>{{numerosExpo[i]}}</td>
+                  <td>{{n}}</td>
+              </tr>
+          </tbody>
+          <!--Table body-->
+        </table>
+  <!--Table-->
+ 
+  <!--Table-->                          
+      </div>
+    </div>
+    <div class="row animated fadeIn" *ngIf="option == 2">
+        <div class="col-4">
+          <button type="button" class="btn btn-info waves-light"  (click)="startR()" mdbRippleRadius>Realizar</button>
+        </div>
+        <div class="col-4">
+          <br>
+          Primer Valor = {{seed}} <br>
+          Numero al azar = {{selectedRandom}}
+        </div>
+        <div class="col-12">
+          <table class="table">
+    
+            <!--Table head-->
+            <thead class="blue-grey lighten-4">
+                <tr >
+                    <th>#</th>
+                    <th>Numero base</th>
+                    <th>Numero generado</th>
+                    <th>Numero seleccionado</th>
+                </tr>
+            </thead>
+            <!--Table head-->
+          
+            <!--Table body-->
+            <tbody>
+                <tr *ngFor="let n of numerosBase; let i = index">
+                    <th scope="row">{{i}}</th>
+                    <td>{{numerosBaseUnsort[i]}}</td>
+                    <td>{{numerosExpo[i]}}</td>
+                    <td>{{n}}</td>
+                </tr>
+            </tbody>
+            <!--Table body-->
+          </table>
+    <!--Table-->
+    
+    <!--Table-->                          
+        </div>
+      </div>
+  </div>
